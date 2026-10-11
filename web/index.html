@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ML Interview Quizzes</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">ML</span>
+      <div>
+        <h1>ML Interview Quizzes</h1>
+        <p class="subtitle">Data Science &amp; AI Engineering — learn, quiz, find your weak spots</p>
+      </div>
+    </div>
+    <nav class="tabs">
+      <button class="tab active" data-view="quiz">Quiz</button>
+      <button class="tab" data-view="kb">Knowledge Base</button>
+      <button class="tab" data-view="weak">Weakness Report</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- QUIZ -->
+    <section id="view-quiz" class="view active">
+      <div id="quiz-setup" class="panel">
+        <h2>Start a quiz</h2>
+        <div class="setup-grid">
+          <label>Topic
+            <select id="topic-select"><option value="all">All topics</option></select>
+          </label>
+          <label>Mode
+            <select id="mode-select">
+              <option value="all">All questions</option>
+              <option value="unseen">Only unseen</option>
+              <option value="wrong">Only previously wrong</option>
+            </select>
+          </label>
+          <label>Order
+            <select id="order-select">
+              <option value="shuffle">Shuffled</option>
+              <option value="sequential">Sequential</option>
+            </select>
+          </label>
+        </div>
+        <button id="start-btn" class="primary">Start quiz</button>
+        <p id="setup-hint" class="hint"></p>
+      </div>
+
+      <div id="quiz-run" class="panel hidden">
+        <div class="quiz-meta">
+          <span id="q-progress">Question 1 / 1</span>
+          <span id="q-score">Score 0</span>
+          <button id="quit-btn" class="ghost">Quit</button>
+        </div>
+        <div class="progress-bar"><div id="progress-fill"></div></div>
+        <p id="q-topic" class="pill"></p>
+        <h2 id="q-text" class="question"></h2>
+        <div id="q-options" class="options"></div>
+        <div id="q-feedback" class="feedback hidden"></div>
+        <div class="quiz-actions">
+          <button id="next-btn" class="primary hidden">Next question</button>
+          <button id="finish-btn" class="primary hidden">See results</button>
+        </div>
+      </div>
+
+      <div id="quiz-done" class="panel hidden">
+        <h2>Quiz complete</h2>
+        <p id="done-summary" class="big-stat"></p>
+        <p id="done-topic" class="hint"></p>
+        <div class="row">
+          <button id="again-btn" class="primary">Quiz again</button>
+          <button id="to-weak-btn" class="ghost">Review weaknesses</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- KNOWLEDGE BASE -->
+    <section id="view-kb" class="view">
+      <div class="kb-layout">
+        <aside class="panel kb-list">
+          <h2>Knowledge Base</h2>
+          <ul id="kb-topics"></ul>
+        </aside>
+        <article class="panel kb-content">
+          <div id="kb-body" class="markdown">
+            <p class="hint">Select a topic to read the notes.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- WEAKNESS -->
+    <section id="view-weak" class="view">
+      <div class="panel">
+        <div class="row space-between">
+          <h2>Weakness Report</h2>
+          <button id="reset-btn" class="ghost danger">Reset history</button>
+        </div>
+        <div id="weak-overview" class="stat-cards"></div>
+      </div>
+      <div class="panel">
+        <h3>Accuracy by topic</h3>
+        <div id="weak-topics"></div>
+      </div>
+      <div class="panel">
+        <h3>Questions you got wrong</h3>
+        <p class="hint">Sorted by how often you missed them — your study list.</p>
+        <div id="weak-questions"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>POC · answers &amp; explanations are served by <code>server.py</code>, history saved to <code>data/history.json</code></span>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>

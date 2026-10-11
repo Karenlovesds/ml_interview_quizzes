@@ -1,0 +1,1928 @@
+{
+  "version": 1,
+  "topics": [
+    {
+      "slug": "supervised-learning",
+      "name": "Supervised Learning",
+      "ref": "corpus/supervised-learning.md"
+    },
+    {
+      "slug": "bias-variance-regularization",
+      "name": "Bias-Variance & Regularization",
+      "ref": "corpus/bias-variance-regularization.md"
+    },
+    {
+      "slug": "tree-ensembles",
+      "name": "Trees & Ensembles",
+      "ref": "corpus/tree-ensembles.md"
+    },
+    {
+      "slug": "deep-learning",
+      "name": "Deep Learning",
+      "ref": "corpus/deep-learning.md"
+    },
+    {
+      "slug": "transformers-llms",
+      "name": "Transformers & LLMs",
+      "ref": "corpus/transformers-llms.md"
+    },
+    {
+      "slug": "evaluation-metrics",
+      "name": "Evaluation Metrics",
+      "ref": "corpus/evaluation-metrics.md"
+    },
+    {
+      "slug": "unsupervised-learning",
+      "name": "Unsupervised Learning",
+      "ref": "corpus/unsupervised-learning.md"
+    },
+    {
+      "slug": "mlops",
+      "name": "MLOps",
+      "ref": "corpus/mlops.md"
+    },
+    {
+      "slug": "statistics-probability",
+      "name": "Statistics & Probability",
+      "ref": "corpus/statistics-probability.md"
+    },
+    {
+      "slug": "llm-finetuning",
+      "name": "LLMs: Training & Fine-tuning",
+      "ref": "corpus/llm-finetuning.md"
+    },
+    {
+      "slug": "llm-image",
+      "name": "Multimodal LLMs & Vision",
+      "ref": "corpus/llm-for-image.md"
+    },
+    {
+      "slug": "llm-evaluation",
+      "name": "LLM Evaluation & Human-in-the-Loop",
+      "ref": "corpus/llm-evaluation.md"
+    },
+    {
+      "slug": "llm-deployment",
+      "name": "LLM Deployment & Serving",
+      "ref": "corpus/llm-deployment.md"
+    },
+    {
+      "slug": "ai-healthcare",
+      "name": "AI in Healthcare & Pharma",
+      "ref": "corpus/ai-healthcare-pharma.md"
+    },
+    {
+      "slug": "ai-terminology",
+      "name": "AI / AI-Engineer Terminology",
+      "ref": "corpus/ai-terminology.md"
+    },
+    {
+      "slug": "pharma-companies",
+      "name": "Pharma Companies for DS/AI Interviews",
+      "ref": "corpus/pharma-companies-interview.md"
+    },
+    {
+      "slug": "agentic-rag-architecture",
+      "name": "Agentic RAG Architecture",
+      "ref": "corpus/agentic-rag-architecture.md"
+    },
+    {
+      "slug": "langchain-langgraph-langsmith",
+      "name": "LangChain, LangGraph & LangSmith",
+      "ref": "corpus/langchain-langgraph-langsmith.md"
+    },
+    {
+      "slug": "ragas-metrics",
+      "name": "RAGAS Metrics",
+      "ref": "corpus/ragas-metrics.md"
+    },
+    {
+      "slug": "rag-retrieval-generation-qa",
+      "name": "RAG: Retrieval, Generation & Q&A",
+      "ref": "corpus/rag-retrieval-generation-common-questions.md"
+    },
+    {
+      "slug": "mlops-basics-and-practices",
+      "name": "MLOps: Practices",
+      "ref": "corpus/mlops-basics-and-practices.md"
+    },
+    {
+      "slug": "rag-deployment-aws",
+      "name": "Deploying RAG on AWS",
+      "ref": "corpus/rag-deployment-aws.md"
+    },
+    {
+      "slug": "frontier-llm-models-pros-cons",
+      "name": "Frontier LLM Models: Pros & Cons",
+      "ref": "corpus/frontier-llm-models-pros-cons.md"
+    }
+  ],
+  "questions": [
+    {
+      "id": "sl-1",
+      "topic": "supervised-learning",
+      "difficulty": "easy",
+      "question": "Which of the following tasks is an example of supervised learning?",
+      "options": [
+        "Segmenting customers into groups without labels",
+        "Predicting house prices from labeled historical sales",
+        "Finding clusters in unlabeled images",
+        "Reducing dimensionality of a feature matrix"
+      ],
+      "answer": 1,
+      "explanation": "Supervised learning uses labeled targets. Predicting house prices from labeled sales is regression; the other options are unsupervised."
+    },
+    {
+      "id": "sl-2",
+      "topic": "supervised-learning",
+      "difficulty": "easy",
+      "question": "What does the sigmoid function in logistic regression output represent?",
+      "options": [
+        "The raw margin of the separating hyperplane",
+        "A probability between 0 and 1 for the positive class",
+        "The feature importance of each input",
+        "The squared error of the prediction"
+      ],
+      "answer": 1,
+      "explanation": "Sigmoid squashes the linear score into (0,1), interpreted as P(y=1|x)."
+    },
+    {
+      "id": "sl-3",
+      "topic": "supervised-learning",
+      "difficulty": "medium",
+      "question": "What is the main advantage of the kernel trick in SVMs?",
+      "options": [
+        "It removes the need for a regularization parameter",
+        "It lets SVMs learn non-linear boundaries without explicitly computing the high-dimensional mapping",
+        "It guarantees zero training error",
+        "It makes SVMs unsupervised"
+      ],
+      "answer": 1,
+      "explanation": "The kernel computes inner products in a high-dimensional space implicitly, enabling non-linear separation at low cost."
+    },
+    {
+      "id": "sl-4",
+      "topic": "supervised-learning",
+      "difficulty": "medium",
+      "question": "Which statement best distinguishes a generative from a discriminative model?",
+      "options": [
+        "Generative models model p(y|x) directly; discriminative models model p(x,y)",
+        "Generative models model p(x,y) and can generate data; discriminative models model p(y|x) directly",
+        "Only generative models can perform classification",
+        "Discriminative models cannot handle continuous features"
+      ],
+      "answer": 1,
+      "explanation": "Generative models learn the joint distribution (Bayes, GMM, HMM); discriminative models learn the decision boundary p(y|x) (logistic regression, SVM)."
+    },
+    {
+      "id": "sl-5",
+      "topic": "supervised-learning",
+      "difficulty": "easy",
+      "question": "Why is k-Nearest Neighbors considered a lazy learner?",
+      "options": [
+        "It requires very little data",
+        "It performs no explicit training and does all work at prediction time",
+        "It always underfits",
+        "It cannot be used for regression"
+      ],
+      "answer": 1,
+      "explanation": "k-NN stores the training data and defers computation to inference, making prediction expensive."
+    },
+    {
+      "id": "bv-1",
+      "topic": "bias-variance-regularization",
+      "difficulty": "easy",
+      "question": "A model has very low training error but much higher validation error. This indicates:",
+      "options": [
+        "High bias (underfitting)",
+        "High variance (overfitting)",
+        "Irreducible error",
+        "Perfect generalization"
+      ],
+      "answer": 1,
+      "explanation": "A large train/validation gap is the signature of overfitting \u2014 high variance."
+    },
+    {
+      "id": "bv-2",
+      "topic": "bias-variance-regularization",
+      "difficulty": "medium",
+      "question": "What is the key difference between L1 (Lasso) and L2 (Ridge) regularization?",
+      "options": [
+        "L1 shrinks all weights equally; L2 zeroes some weights",
+        "L1 can drive weights exactly to zero (sparse); L2 shrinks them smoothly toward zero",
+        "L2 only works for classification",
+        "There is no practical difference"
+      ],
+      "answer": 1,
+      "explanation": "The L1 penalty's corner at zero yields sparse solutions and feature selection; L2 shrinks weights but rarely to exactly zero."
+    },
+    {
+      "id": "bv-3",
+      "topic": "bias-variance-regularization",
+      "difficulty": "medium",
+      "question": "As model complexity increases, what typically happens to bias and variance?",
+      "options": [
+        "Both increase",
+        "Bias decreases and variance increases",
+        "Bias increases and variance decreases",
+        "Both decrease"
+      ],
+      "answer": 1,
+      "explanation": "More complex models fit training data more tightly: lower bias, higher variance."
+    },
+    {
+      "id": "bv-4",
+      "topic": "bias-variance-regularization",
+      "difficulty": "medium",
+      "question": "Training and validation error curves converge at a high error value as more data is added. This suggests:",
+      "options": [
+        "High variance",
+        "High bias",
+        "Data leakage",
+        "The model is well calibrated"
+      ],
+      "answer": 1,
+      "explanation": "Convergence at high error means more data won't help \u2014 the model is too simple (high bias)."
+    },
+    {
+      "id": "bv-5",
+      "topic": "bias-variance-regularization",
+      "difficulty": "hard",
+      "question": "Why does dropout act as a regularizer?",
+      "options": [
+        "It increases the learning rate",
+        "It randomly disables neurons, preventing units from co-adapting and approximating an ensemble",
+        "It normalizes the input features",
+        "It reduces the number of training examples"
+      ],
+      "answer": 1,
+      "explanation": "Dropout samples sub-networks each step, discouraging co-adaptation and behaving like an ensemble at test time."
+    },
+    {
+      "id": "te-1",
+      "topic": "tree-ensembles",
+      "difficulty": "easy",
+      "question": "What does bagging primarily reduce?",
+      "options": [
+        "Bias",
+        "Variance",
+        "The number of features",
+        "The training set size"
+      ],
+      "answer": 1,
+      "explanation": "Averaging models trained on bootstrap samples reduces variance while leaving bias roughly unchanged."
+    },
+    {
+      "id": "te-2",
+      "topic": "tree-ensembles",
+      "difficulty": "medium",
+      "question": "How does gradient boosting build its ensemble?",
+      "options": [
+        "It trains trees independently in parallel",
+        "It trains trees sequentially, each fitting the residual errors of the current ensemble",
+        "It randomizes the labels",
+        "It only uses a single deep tree"
+      ],
+      "answer": 1,
+      "explanation": "Each new tree fits the negative gradient (residuals) of the loss, sequentially reducing bias."
+    },
+    {
+      "id": "te-3",
+      "topic": "tree-ensembles",
+      "difficulty": "medium",
+      "question": "Why is permutation importance generally preferred over Gini/impurity importance?",
+      "options": [
+        "It is faster to compute",
+        "Gini importance is biased toward high-cardinality features, while permutation importance measures the actual metric drop",
+        "Permutation importance never gives zero",
+        "Gini importance requires SHAP"
+      ],
+      "answer": 1,
+      "explanation": "Impurity importance inflates high-cardinality features; permutation importance measures the real impact on the evaluation metric."
+    },
+    {
+      "id": "te-4",
+      "topic": "tree-ensembles",
+      "difficulty": "easy",
+      "question": "Which criterion is used to choose splits in a classification tree?",
+      "options": [
+        "Mean squared error",
+        "Gini impurity or entropy",
+        "Cosine similarity",
+        "R-squared"
+      ],
+      "answer": 1,
+      "explanation": "Classification trees split to minimize impurity (Gini) or maximize information gain (entropy)."
+    },
+    {
+      "id": "te-5",
+      "topic": "tree-ensembles",
+      "difficulty": "hard",
+      "question": "Compared to bagging, boosting is more prone to overfitting because:",
+      "options": [
+        "It uses too many bootstrap samples",
+        "It sequentially focuses on hard examples, increasing effective capacity if not tuned",
+        "It cannot use shallow trees",
+        "It ignores the loss function"
+      ],
+      "answer": 1,
+      "explanation": "Boosting reduces bias aggressively by fitting residuals; without regularization/early stopping it can overfit noisy data."
+    },
+    {
+      "id": "dl-1",
+      "topic": "deep-learning",
+      "difficulty": "easy",
+      "question": "What happens if you remove all non-linear activation functions from a deep network?",
+      "options": [
+        "It becomes more expressive",
+        "The entire network collapses to a single linear transformation",
+        "It becomes a decision tree",
+        "Training always diverges"
+      ],
+      "answer": 1,
+      "explanation": "A composition of linear maps is linear, so depth provides no extra representational power without non-linearities."
+    },
+    {
+      "id": "dl-2",
+      "topic": "deep-learning",
+      "difficulty": "medium",
+      "question": "Which activation is most commonly used to mitigate the vanishing gradient problem in hidden layers?",
+      "options": [
+        "Sigmoid",
+        "Tanh",
+        "ReLU",
+        "Softmax"
+      ],
+      "answer": 2,
+      "explanation": "ReLU has a constant gradient of 1 for positive inputs, avoiding the saturation that plagues sigmoid/tanh."
+    },
+    {
+      "id": "dl-3",
+      "topic": "deep-learning",
+      "difficulty": "medium",
+      "question": "What is the role of batch normalization?",
+      "options": [
+        "It drops neurons randomly",
+        "It normalizes layer activations to stabilize and speed up training",
+        "It converts logits to probabilities",
+        "It reduces the learning rate"
+      ],
+      "answer": 1,
+      "explanation": "BatchNorm standardizes activations per mini-batch, stabilizing distributions and allowing higher learning rates."
+    },
+    {
+      "id": "dl-4",
+      "topic": "deep-learning",
+      "difficulty": "medium",
+      "question": "Why are convolutions well suited to images?",
+      "options": [
+        "They use weight sharing and local receptive fields, exploiting spatial structure with few parameters",
+        "They require fully connected layers",
+        "They are permutation-invariant across all pixels",
+        "They eliminate the need for activation functions"
+      ],
+      "answer": 0,
+      "explanation": "Weight sharing and locality give translation equivariance and parameter efficiency for grid-like data."
+    },
+    {
+      "id": "dl-5",
+      "topic": "deep-learning",
+      "difficulty": "hard",
+      "question": "What makes Adam different from plain SGD?",
+      "options": [
+        "It uses second-order derivatives exactly",
+        "It adapts a per-parameter learning rate using running estimates of first and second moments",
+        "It removes the need for a loss function",
+        "It only works for convex problems"
+      ],
+      "answer": 1,
+      "explanation": "Adam maintains exponential moving averages of gradients and squared gradients, giving adaptive per-parameter steps."
+    },
+    {
+      "id": "tr-1",
+      "topic": "transformers-llms",
+      "difficulty": "medium",
+      "question": "Why is the dot-product attention scaled by 1/sqrt(d_k)?",
+      "options": [
+        "To reduce the number of parameters",
+        "To keep the softmax from saturating when d_k is large",
+        "To add positional information",
+        "To make attention causal"
+      ],
+      "answer": 1,
+      "explanation": "Large dot products push softmax into low-gradient regions; scaling by 1/sqrt(d_k) stabilizes the gradients."
+    },
+    {
+      "id": "tr-2",
+      "topic": "transformers-llms",
+      "difficulty": "medium",
+      "question": "What is the purpose of positional encodings in a Transformer?",
+      "options": [
+        "To normalize activations",
+        "To inject sequence order because self-attention is permutation-invariant",
+        "To mask future tokens",
+        "To reduce vocabulary size"
+      ],
+      "answer": 1,
+      "explanation": "Self-attention has no inherent notion of order, so positional encodings are added to encode token positions."
+    },
+    {
+      "id": "tr-3",
+      "topic": "transformers-llms",
+      "difficulty": "medium",
+      "question": "What is LoRA in the context of LLM fine-tuning?",
+      "options": [
+        "A quantization scheme",
+        "Training low-rank adapter matrices while freezing the base model weights",
+        "A type of positional encoding",
+        "A sampling strategy"
+      ],
+      "answer": 1,
+      "explanation": "LoRA injects trainable low-rank matrices, drastically reducing the number of trained parameters."
+    },
+    {
+      "id": "tr-4",
+      "topic": "transformers-llms",
+      "difficulty": "hard",
+      "question": "In RLHF, what is the reward model trained on?",
+      "options": [
+        "Raw internet text",
+        "Human preference comparisons between model outputs",
+        "The cross-entropy loss of the base model",
+        "The KV cache"
+      ],
+      "answer": 1,
+      "explanation": "A reward model learns to predict human preferences, then the policy is optimized against it (e.g., with PPO)."
+    },
+    {
+      "id": "tr-5",
+      "topic": "transformers-llms",
+      "difficulty": "medium",
+      "question": "Lowering the sampling temperature does what?",
+      "options": [
+        "Makes outputs more random",
+        "Makes the output distribution sharper and more deterministic",
+        "Increases the context window",
+        "Removes the need for a KV cache"
+      ],
+      "answer": 1,
+      "explanation": "Dividing logits by a smaller temperature sharpens the softmax, favoring high-probability tokens."
+    },
+    {
+      "id": "ev-1",
+      "topic": "evaluation-metrics",
+      "difficulty": "easy",
+      "question": "On a dataset with 1% positive class, which metric is most misleading?",
+      "options": [
+        "F1 score",
+        "Accuracy",
+        "Recall",
+        "PR-AUC"
+      ],
+      "answer": 1,
+      "explanation": "Predicting all negatives gives 99% accuracy while detecting no positives \u2014 accuracy is misleading under imbalance."
+    },
+    {
+      "id": "ev-2",
+      "topic": "evaluation-metrics",
+      "difficulty": "medium",
+      "question": "Precision is defined as:",
+      "options": [
+        "TP / (TP + FN)",
+        "TP / (TP + FP)",
+        "TN / (TN + FP)",
+        "(TP + TN) / N"
+      ],
+      "answer": 1,
+      "explanation": "Precision = of the predicted positives, how many are actually positive: TP/(TP+FP)."
+    },
+    {
+      "id": "ev-3",
+      "topic": "evaluation-metrics",
+      "difficulty": "medium",
+      "question": "For time-series data, which validation strategy is correct?",
+      "options": [
+        "Standard k-fold with shuffled samples",
+        "Splitting chronologically with a time-series / rolling split",
+        "Leave-one-out",
+        "Random train/test split"
+      ],
+      "answer": 1,
+      "explanation": "Shuffling leaks future information into training; time-series splits must respect temporal order."
+    },
+    {
+      "id": "ev-4",
+      "topic": "evaluation-metrics",
+      "difficulty": "medium",
+      "question": "Which is an example of data leakage?",
+      "options": [
+        "Scaling features using only the training set statistics",
+        "Standardizing the whole dataset before train/test splitting",
+        "Using stratified k-fold",
+        "Using a validation set for early stopping"
+      ],
+      "answer": 1,
+      "explanation": "Fitting a scaler on the full dataset lets test statistics leak into training, inflating performance."
+    },
+    {
+      "id": "ev-5",
+      "topic": "evaluation-metrics",
+      "difficulty": "hard",
+      "question": "When is PR-AUC preferable to ROC-AUC?",
+      "options": [
+        "When classes are balanced",
+        "When there is severe class imbalance and the positive class matters most",
+        "Only for regression",
+        "Never; they are identical"
+      ],
+      "answer": 1,
+      "explanation": "ROC-AUC can look optimistic under heavy imbalance because it uses TN; PR-AUC focuses on the positive class."
+    },
+    {
+      "id": "un-1",
+      "topic": "unsupervised-learning",
+      "difficulty": "easy",
+      "question": "Which method is best for finding clusters of arbitrary shape with noise?",
+      "options": [
+        "k-means",
+        "DBSCAN",
+        "PCA",
+        "Linear regression"
+      ],
+      "answer": 1,
+      "explanation": "DBSCAN is density-based, so it finds non-spherical clusters and labels low-density points as outliers."
+    },
+    {
+      "id": "un-2",
+      "topic": "unsupervised-learning",
+      "difficulty": "medium",
+      "question": "PCA finds projections that:",
+      "options": [
+        "Maximize class separation",
+        "Maximize variance (minimize reconstruction error) in a linear subspace",
+        "Preserve pairwise distances exactly",
+        "Require labels"
+      ],
+      "answer": 1,
+      "explanation": "PCA projects onto the leading eigenvectors of the covariance matrix \u2014 directions of maximum variance."
+    },
+    {
+      "id": "un-3",
+      "topic": "unsupervised-learning",
+      "difficulty": "medium",
+      "question": "Why should distances between clusters in a t-SNE plot not be over-interpreted?",
+      "options": [
+        "t-SNE is linear",
+        "t-SNE preserves local neighborhoods but not global pairwise distances",
+        "t-SNE only works with labels",
+        "t-SNE is deterministic"
+      ],
+      "answer": 1,
+      "explanation": "t-SNE prioritizes local structure; the size and separation of far clusters are unreliable."
+    },
+    {
+      "id": "un-4",
+      "topic": "unsupervised-learning",
+      "difficulty": "medium",
+      "question": "How does a Gaussian Mixture Model differ from k-means?",
+      "options": [
+        "GMM gives soft, probabilistic cluster memberships; k-means assigns hard labels",
+        "GMM is supervised",
+        "k-means models covariances",
+        "They are identical"
+      ],
+      "answer": 0,
+      "explanation": "GMM models each cluster as a Gaussian and returns posterior membership probabilities via EM."
+    },
+    {
+      "id": "un-5",
+      "topic": "unsupervised-learning",
+      "difficulty": "hard",
+      "question": "An autoencoder is commonly used for anomaly detection by:",
+      "options": [
+        "Labeling every point normal",
+        "Flagging points with high reconstruction error as anomalies",
+        "Maximizing cluster separation",
+        "Computing feature importance"
+      ],
+      "answer": 1,
+      "explanation": "Trained to reconstruct normal data, an autoencoder poorly reconstructs anomalies, giving high error."
+    },
+    {
+      "id": "mo-1",
+      "topic": "mlops",
+      "difficulty": "easy",
+      "question": "When standardizing features, on which data should the scaler be fit?",
+      "options": [
+        "The full dataset",
+        "Only the training set",
+        "Only the test set",
+        "The labels"
+      ],
+      "answer": 1,
+      "explanation": "Fit the scaler on train only, then transform validation/test to avoid leakage."
+    },
+    {
+      "id": "mo-2",
+      "topic": "mlops",
+      "difficulty": "medium",
+      "question": "Concept drift refers to:",
+      "options": [
+        "The input distribution P(X) changing",
+        "The relationship P(Y|X) changing over time",
+        "A database schema change",
+        "A type of regularization"
+      ],
+      "answer": 1,
+      "explanation": "Concept drift is a change in the mapping from inputs to targets; data drift is a change in P(X)."
+    },
+    {
+      "id": "mo-3",
+      "topic": "mlops",
+      "difficulty": "medium",
+      "question": "A canary deployment is used to:",
+      "options": [
+        "Train a model faster",
+        "Release a change to a small fraction of traffic to limit risk",
+        "Remove the need for monitoring",
+        "Increase the learning rate"
+      ],
+      "answer": 1,
+      "explanation": "Canary releases expose a new model to a subset of users to catch regressions before full rollout."
+    },
+    {
+      "id": "mo-4",
+      "topic": "mlops",
+      "difficulty": "medium",
+      "question": "Which technique synthesizes new minority-class examples to handle imbalance?",
+      "options": [
+        "PCA",
+        "SMOTE",
+        "BatchNorm",
+        "Dropout"
+      ],
+      "answer": 1,
+      "explanation": "SMOTE interpolates between existing minority points to create synthetic samples."
+    },
+    {
+      "id": "mo-5",
+      "topic": "mlops",
+      "difficulty": "hard",
+      "question": "Which practices most directly support reproducibility?",
+      "options": [
+        "Only saving the final model weights",
+        "Pinning data, code, environment, and random seeds and logging hyperparameters/metrics",
+        "Using the largest possible model",
+        "Skipping validation sets"
+      ],
+      "answer": 1,
+      "explanation": "Reproducibility requires versioned data/code/env, fixed seeds, and tracked experiments."
+    },
+    {
+      "id": "st-1",
+      "topic": "statistics-probability",
+      "difficulty": "medium",
+      "question": "A p-value of 0.03 means:",
+      "options": [
+        "There is a 3% chance the null hypothesis is true",
+        "Assuming the null is true, there is a 3% chance of observing data at least this extreme",
+        "The effect size is 3%",
+        "The result is certainly correct"
+      ],
+      "answer": 1,
+      "explanation": "A p-value is the probability of the observed (or more extreme) data under H0, not the probability H0 is true."
+    },
+    {
+      "id": "st-2",
+      "topic": "statistics-probability",
+      "difficulty": "medium",
+      "question": "Which is true about maximum likelihood estimation (MLE)?",
+      "options": [
+        "It maximizes the prior probability of parameters",
+        "It chooses parameters that maximize the likelihood of the observed data",
+        "It minimizes the number of parameters",
+        "It requires labeled data only"
+      ],
+      "answer": 1,
+      "explanation": "MLE picks parameters maximizing P(data|\u03b8). Adding a prior yields MAP."
+    },
+    {
+      "id": "st-3",
+      "topic": "statistics-probability",
+      "difficulty": "medium",
+      "question": "If X and Y are independent, which identity holds?",
+      "options": [
+        "Var(X+Y) = Var(X) + Var(Y)",
+        "Var(X+Y) = Var(X)\u00b7Var(Y)",
+        "E[XY] = E[X] + E[Y]",
+        "Cov(X,Y) = 1"
+      ],
+      "answer": 0,
+      "explanation": "Independence implies Cov(X,Y)=0, so variances add: Var(X+Y)=Var(X)+Var(Y)."
+    },
+    {
+      "id": "st-4",
+      "topic": "statistics-probability",
+      "difficulty": "medium",
+      "question": "What does the Central Limit Theorem state?",
+      "options": [
+        "All data are normally distributed",
+        "The sampling distribution of the mean approaches normality as sample size grows",
+        "Samples are always independent",
+        "Variance decreases with more features"
+      ],
+      "answer": 1,
+      "explanation": "For i.i.d. variables with finite variance, the mean's sampling distribution tends to a normal distribution."
+    },
+    {
+      "id": "st-5",
+      "topic": "statistics-probability",
+      "difficulty": "hard",
+      "question": "Adding an L2 penalty to a logistic regression is equivalent to:",
+      "options": [
+        "Using a uniform prior in MAP estimation",
+        "Using a Gaussian prior on the weights in MAP estimation",
+        "Removing the intercept",
+        "Increasing the likelihood"
+      ],
+      "answer": 1,
+      "explanation": "A zero-mean Gaussian prior on weights yields an L2 penalty under MAP; a Laplace prior yields L1."
+    },
+    {
+      "id": "ls-1",
+      "topic": "llm-finetuning",
+      "difficulty": "medium",
+      "question": "What is the usual order of building an aligned chat model from a base model?",
+      "options": [
+        "Pretraining -> RLHF -> SFT",
+        "Pretraining -> supervised fine-tuning (SFT) -> preference optimization (RLHF/DPO)",
+        "SFT -> pretraining -> prompting",
+        "There is no standard order"
+      ],
+      "answer": 1,
+      "explanation": "The standard stack is pretraining for base knowledge, SFT on instruction pairs to follow instructions, then RLHF or DPO to align with human preferences."
+    },
+    {
+      "id": "ls-2",
+      "topic": "llm-finetuning",
+      "difficulty": "medium",
+      "question": "What is the main advantage of LoRA over full fine-tuning?",
+      "options": [
+        "It always gives better quality",
+        "It trains only small low-rank adapters, so it needs far fewer trainable parameters and less memory",
+        "It removes the need for a base model",
+        "It guarantees zero hallucination"
+      ],
+      "answer": 1,
+      "explanation": "LoRA freezes base weights and trains low-rank matrices, cutting memory and cost while being easy to swap between tasks."
+    },
+    {
+      "id": "ls-3",
+      "topic": "llm-finetuning",
+      "difficulty": "medium",
+      "question": "Which technique is most direct when you need a model to answer using up-to-date documents without retraining?",
+      "options": [
+        "Full fine-tuning",
+        "RAG (retrieval-augmented generation)",
+        "DPO",
+        "Model distillation"
+      ],
+      "answer": 1,
+      "explanation": "RAG retrieves relevant documents and inserts them into the prompt, grounding answers without weight updates."
+    },
+    {
+      "id": "ls-4",
+      "topic": "llm-finetuning",
+      "difficulty": "hard",
+      "question": "How does DPO differ from RLHF?",
+      "options": [
+        "DPO requires a trained reward model and PPO",
+        "DPO optimizes directly on preference pairs with a closed-form loss, no reward model or RL loop",
+        "DPO only works for images",
+        "They are identical"
+      ],
+      "answer": 1,
+      "explanation": "DPO re-parameterizes the RLHF objective into a supervised loss over preference data, skipping the reward model and PPO."
+    },
+    {
+      "id": "ls-5",
+      "topic": "llm-finetuning",
+      "difficulty": "medium",
+      "question": "Chain-of-thought prompting is most likely to improve performance on:",
+      "options": [
+        "Single-word vocabulary recall",
+        "Multi-step reasoning tasks like math and logic",
+        "Image color detection",
+        "Token count estimation"
+      ],
+      "answer": 1,
+      "explanation": "CoT elicits intermediate reasoning steps, which helps multi-step tasks; it is less relevant for simple recall."
+    },
+    {
+      "id": "vi-1",
+      "topic": "llm-image",
+      "difficulty": "medium",
+      "question": "How does CLIP enable zero-shot image classification?",
+      "options": [
+        "It trains directly on labeled ImageNet classes",
+        "It contrasts image and text embeddings so an image can be matched to text label descriptions",
+        "It uses k-means on the image pixels",
+        "It requires fine-tuning per class"
+      ],
+      "answer": 1,
+      "explanation": "CLIP learns aligned image/text embeddings with a contrastive loss; classify by picking the class whose text embedding is closest to the image."
+    },
+    {
+      "id": "vi-2",
+      "topic": "llm-image",
+      "difficulty": "medium",
+      "question": "How does a Vision Transformer (ViT) process an image?",
+      "options": [
+        "As one flattened pixel vector fed through an LSTM",
+        "By splitting the image into fixed-size patches and feeding patch embeddings through a Transformer",
+        "By sliding filters over raw pixels",
+        "It ignores spatial information"
+      ],
+      "answer": 1,
+      "explanation": "ViT cuts the image into patches, projects each to an embedding with positional encoding, and applies self-attention \u2014 the Transformer view of vision."
+    },
+    {
+      "id": "vi-3",
+      "topic": "llm-image",
+      "difficulty": "medium",
+      "question": "In a vision-language model like LLaVA, what connects the image encoder to the LLM?",
+      "options": [
+        "A softmax layer",
+        "A projector that maps image features into the LLM embedding space",
+        "A vector database",
+        "An OCR step only"
+      ],
+      "answer": 1,
+      "explanation": "A projection/connector (often an MLP) aligns vision encoder outputs with the LLM's token embedding space so the LLM can consume visual context."
+    },
+    {
+      "id": "vi-4",
+      "topic": "llm-image",
+      "difficulty": "medium",
+      "question": "How do text-to-image diffusion models work at a high level?",
+      "options": [
+        "They classify real photos",
+        "They iteratively denoise random noise toward an image conditioned on a text prompt",
+        "They concatenate images end to end",
+        "They generate images by copying training examples"
+      ],
+      "answer": 1,
+      "explanation": "Diffusion starts from noise and progressively removes it, guided by text conditioning, to produce the final image."
+    },
+    {
+      "id": "vi-5",
+      "topic": "llm-image",
+      "difficulty": "medium",
+      "question": "A common failure mode of vision-language models that you should evaluate for is:",
+      "options": [
+        "They always produce identical outputs",
+        "Hallucinating objects, details, or text that are not in the image",
+        "They cannot process any text",
+        "They ignore all pixels"
+      ],
+      "answer": 1,
+      "explanation": "VLMs can invent plausible but false content (objects, OCR text, attributes); human review and grounded benchmarks are needed."
+    },
+    {
+      "id": "ev2-1",
+      "topic": "llm-evaluation",
+      "difficulty": "medium",
+      "question": "Why are BLEU/ROUGE weak metrics for open-ended LLM tasks?",
+      "options": [
+        "They are too slow to compute",
+        "They measure n-gram overlap rather than meaning, so different-but-equivalent answers score poorly",
+        "They require a reward model",
+        "They only work on images"
+      ],
+      "answer": 1,
+      "explanation": "BLEU/ROUGE reward surface similarity. They suit translation/summarization but miss semantically correct, differently-worded answers."
+    },
+    {
+      "id": "ev2-2",
+      "topic": "llm-evaluation",
+      "difficulty": "medium",
+      "question": "What is a 'golden set' in LLM evaluation?",
+      "options": [
+        "The gold-standard GPU to benchmark on",
+        "A small curated set of prompts with expected/reference answers used as regression tests",
+        "The training data of the base model",
+        "A type of quantization"
+      ],
+      "answer": 1,
+      "explanation": "Golden sets pin expected behavior; you rerun them after every prompt/model/code change to catch regressions."
+    },
+    {
+      "id": "ev2-3",
+      "topic": "llm-evaluation",
+      "difficulty": "medium",
+      "question": "Which approach best describes human-in-the-loop evaluation for high-stakes output?",
+      "options": [
+        "Automatically shipping every model output",
+        "Humans review model outputs (or drafts with evidence) before use, guided by rubrics and side-by-side comparisons",
+        "Removing all automated checks",
+        "Only using exact-match metrics"
+      ],
+      "answer": 1,
+      "explanation": "Human-in-the-loop means humans validate or correct outputs where errors are costly, using structured criteria rather than gut feeling."
+    },
+    {
+      "id": "ev2-4",
+      "topic": "llm-evaluation",
+      "difficulty": "hard",
+      "question": "What is a known bias of LLM-as-a-judge evaluation?",
+      "options": [
+        "It is always better than human evaluation",
+        "Position bias (favoring the first or second answer), length bias, and self-preference",
+        "It cannot process text",
+        "It is fully deterministic"
+      ],
+      "answer": 1,
+      "explanation": "LLM judges can prefer longer or self-style outputs and are sensitive to answer order; calibrate them against human labels."
+    },
+    {
+      "id": "ev2-5",
+      "topic": "llm-evaluation",
+      "difficulty": "medium",
+      "question": "To detect hallucinated facts in a summary, which method directly checks claims against a source?",
+      "options": [
+        "Measuring token throughput",
+        "Fact verification like FActScore or grounding checks against retrieved context",
+        "Counting n-gram matches",
+        "Lowering temperature"
+      ],
+      "answer": 1,
+      "explanation": "Fact-level verification decomposes output into claims and checks each against an authoritative source \u2014 the direct test for hallucination."
+    },
+    {
+      "id": "dp-1",
+      "topic": "llm-deployment",
+      "difficulty": "medium",
+      "question": "What is the main purpose of the KV cache during inference?",
+      "options": [
+        "To store training data",
+        "To reuse past keys/values so autoregressive decoding avoids recomputing attention over previous tokens",
+        "To quantize weights",
+        "To increase output randomness"
+      ],
+      "answer": 1,
+      "explanation": "The KV cache stores attention keys/values from earlier positions, making incremental token generation much faster."
+    },
+    {
+      "id": "dp-2",
+      "topic": "llm-deployment",
+      "difficulty": "medium",
+      "question": "Which metric matters most for perceived responsiveness when a chat UI streams tokens?",
+      "options": [
+        "Total training loss",
+        "Time to first token (TTFT) followed by steady token rate",
+        "MMLU score",
+        "Number of parameters"
+      ],
+      "answer": 1,
+      "explanation": "Users notice the first token quickly and then smooth streaming; both TTFT and inter-token latency shape perceived speed."
+    },
+    {
+      "id": "dp-3",
+      "topic": "llm-deployment",
+      "difficulty": "medium",
+      "question": "Quantizing model weights to 4-bit (e.g., GPTQ/AWQ) mainly:",
+      "options": [
+        "Improves answer quality",
+        "Cuts memory and cost with a small, calibratable quality loss",
+        "Removes the need for a GPU",
+        "Doubles the context window for free"
+      ],
+      "answer": 1,
+      "explanation": "Low-precision weights drastically shrink memory footprint and serving cost; calibration limits quality degradation."
+    },
+    {
+      "id": "dp-4",
+      "topic": "llm-deployment",
+      "difficulty": "hard",
+      "question": "For a deployed LLM with long contexts and many concurrent users, why might memory dominate?",
+      "options": [
+        "The scheduler consumes all memory",
+        "The KV cache grows with sequence length and concurrent requests, often exceeding weight memory",
+        "Embeddings are always 100 GB",
+        "It cannot happen"
+      ],
+      "answer": 1,
+      "explanation": "KV cache per request scales with seq_len x layers; with many long conversations it dwarfs the static weight footprint."
+    },
+    {
+      "id": "dp-5",
+      "topic": "llm-deployment",
+      "difficulty": "medium",
+      "question": "Which practice helps protect a deployed LLM from prompt injection and off-policy behavior?",
+      "options": [
+        "Disabling all monitoring",
+        "Guardrails that filter and rewrite risky inputs/outputs, plus isolated system instructions",
+        "Increasing temperature",
+        "Removing the model registry"
+      ],
+      "answer": 1,
+      "explanation": "Guardrails and instruction isolation are the first line of defense; evaluation gates and monitoring complete the loop."
+    },
+    {
+      "id": "hc-1",
+      "topic": "ai-healthcare",
+      "difficulty": "medium",
+      "question": "When evaluating a model for a rare disease, why is accuracy a poor metric?",
+      "options": [
+        "Accuracy is always negative",
+        "A model predicting 'no disease' for everyone gets high accuracy while detecting nothing",
+        "Accuracy is deprecated",
+        "Accuracy requires labels"
+      ],
+      "answer": 1,
+      "explanation": "With a tiny positive class, the trivial all-negative model scores high accuracy; use recall, PR-AUC, and calibration instead."
+    },
+    {
+      "id": "hc-2",
+      "topic": "ai-healthcare",
+      "difficulty": "medium",
+      "question": "A model's probabilities in healthcare should be well calibrated because:",
+      "options": [
+        "Radiologists only look at images",
+        "Clinicians act on the numeric probability; a '90%' must be correct about 90% of the time",
+        "Calibration removes the need for validation",
+        "It reduces class imbalance"
+      ],
+      "answer": 1,
+      "explanation": "Decision thresholds and risk communication depend on probabilities reflecting true frequencies, so calibration is a safety requirement."
+    },
+    {
+      "id": "hc-3",
+      "topic": "ai-healthcare",
+      "difficulty": "medium",
+      "question": "What is an important fairness consideration for medical ML models?",
+      "options": [
+        "Using more features always fixes bias",
+        "Auditing performance on subgroups (race, sex, age, disease subtype) because demographics bias training data",
+        "Ignoring underrepresented groups",
+        "Only training on majority data"
+      ],
+      "answer": 1,
+      "explanation": "Models can underperform for groups underrepresented in training; subgroup performance audits are essential before deployment."
+    },
+    {
+      "id": "hc-4",
+      "topic": "ai-healthcare",
+      "difficulty": "medium",
+      "question": "Under U.S. rules, a model that directly suggests treatment is typically regulated as:",
+      "options": [
+        "An open-source library",
+        "Software as a Medical Device (SaMD) by the FDA, requiring clinical evidence and monitoring",
+        "A consumer app exempt from all rules",
+        "A database"
+      ],
+      "answer": 1,
+      "explanation": "SaMD classification triggers risk-based FDA requirements including clinical validation and post-market surveillance."
+    },
+    {
+      "id": "hc-5",
+      "topic": "ai-healthcare",
+      "difficulty": "medium",
+      "question": "In drug discovery, what is the role of ML 'property prediction' (e.g., ADMET)?",
+      "options": [
+        "Drawing molecules by hand",
+        "Filtering candidate molecules for properties like toxicity and bioabsorption before they advance",
+        "Predicting a patient's insurance",
+        "Coding medical records"
+      ],
+      "answer": 1,
+      "explanation": "Early ADMET filtering removes unpromising candidates, saving cost and time before synthesis and trials."
+    },
+    {
+      "id": "tm-1",
+      "topic": "ai-terminology",
+      "difficulty": "easy",
+      "question": "What is the 'context window' of an LLM?",
+      "options": [
+        "The GPU memory size",
+        "The maximum number of tokens the model can consider at once (input + output)",
+        "The number of training epochs",
+        "The vocabulary of BERT only"
+      ],
+      "answer": 1,
+      "explanation": "Context window caps combined input and output tokens the model can attend to in one request."
+    },
+    {
+      "id": "tm-2",
+      "topic": "ai-terminology",
+      "difficulty": "medium",
+      "question": "Grounding in an LLM system means:",
+      "options": [
+        "Making answers shorter",
+        "Tying model output to verifiable, retrievable sources (e.g., RAG context)",
+        "Converting tokens to pixels",
+        "Disabling temperature"
+      ],
+      "answer": 1,
+      "explanation": "Grounding anchors responses in retrieved/verified evidence, which is the main practical defense against hallucination."
+    },
+    {
+      "id": "tm-3",
+      "topic": "ai-terminology",
+      "difficulty": "easy",
+      "question": "What is model distillation?",
+      "options": [
+        "Training on more data for the same model",
+        "Training a smaller student model to imitate a larger teacher's outputs",
+        "Quantizing with AWQ",
+        "Sharding a GPU"
+      ],
+      "answer": 1,
+      "explanation": "Distillation transfers a teacher's knowledge to a compact student, often preserving much of the quality at lower cost."
+    },
+    {
+      "id": "tm-4",
+      "topic": "ai-terminology",
+      "difficulty": "easy",
+      "question": "What does data leakage mean in ML?",
+      "options": [
+        "Data being slow to load",
+        "Information from the test set reaching the training pipeline, inflating measured performance",
+        "The model forgetting old data",
+        "Losing labels in production"
+      ],
+      "answer": 1,
+      "explanation": "Leakage (e.g., scaling before the split, target leakage) makes offline scores optimistic and production behavior disappoint."
+    },
+    {
+      "id": "tm-5",
+      "topic": "ai-terminology",
+      "difficulty": "medium",
+      "question": "What does TTFT measure in LLM serving?",
+      "options": [
+        "Total training fine-tuning time",
+        "Time from request to the first generated token",
+        "Toxicity trigger frequency threshold",
+        "Tensor transfer rate"
+      ],
+      "answer": 1,
+      "explanation": "Time-to-first-token measures load-to-answers latency and drives perceived responsiveness of streaming UIs."
+    },
+    {
+      "id": "pc-1",
+      "topic": "pharma-companies",
+      "difficulty": "easy",
+      "question": "Which company is known for strong GLP-1/obesity portfolio (Mounjaro/Zepbound)?",
+      "options": [
+        "Roche",
+        "Eli Lilly",
+        "Sanofi",
+        "Bayer"
+      ],
+      "answer": 1,
+      "explanation": "Eli Lilly leads in GLP-1 (tirzepatide) with Mounjaro/Zepbound."
+    },
+    {
+      "id": "pc-2",
+      "topic": "pharma-companies",
+      "difficulty": "easy",
+      "question": "Which company is best known for Keytruda (pembrolizumab)?",
+      "options": [
+        "Novo Nordisk",
+        "Amgen",
+        "Merck",
+        "Gilead"
+      ],
+      "answer": 2,
+      "explanation": "Merck markets Keytruda, a blockbuster PD-1 inhibitor."
+    },
+    {
+      "id": "pc-3",
+      "topic": "pharma-companies",
+      "difficulty": "medium",
+      "question": "Which area is most relevant for DS in clinical trials?",
+      "options": [
+        "Patient stratification/enrichment",
+        "Logo design",
+        "Office seating",
+        "Font choices"
+      ],
+      "answer": 0,
+      "explanation": "ML helps identify patients likely to respond and optimize sites/recruitment."
+    },
+    {
+      "id": "pc-4",
+      "topic": "pharma-companies",
+      "difficulty": "medium",
+      "question": "Why care about calibration in clinical risk models?",
+      "options": [
+        "It looks nice",
+        "Probabilities must reflect true risk for clinical decisions",
+        "Makes code shorter",
+        "Removes PHI"
+      ],
+      "answer": 1,
+      "explanation": "Well-calibrated probabilities are needed for safe, actionable clinical decisions."
+    },
+    {
+      "id": "pc-5",
+      "topic": "pharma-companies",
+      "difficulty": "easy",
+      "question": "Which is a key compliance concern when using patient data?",
+      "options": [
+        "CSS",
+        "HIPAA/PHI",
+        "HTTP verbs",
+        "JSON"
+      ],
+      "answer": 1,
+      "explanation": "PHI must be handled per HIPAA/GDPR and GxP context in regulated work."
+    },
+    {
+      "id": "ar-1",
+      "topic": "agentic-rag-architecture",
+      "difficulty": "medium",
+      "question": "What distinguishes agentic RAG from vanilla RAG?",
+      "options": [
+        "Only uses larger model",
+        "Planner decides when to retrieve/rewrite/search/tools",
+        "No embeddings",
+        "No documents"
+      ],
+      "answer": 1,
+      "explanation": "Agentic RAG adds planning/reasoning + tool use to decide retrieval strategy."
+    },
+    {
+      "id": "ar-2",
+      "topic": "agentic-rag-architecture",
+      "difficulty": "medium",
+      "question": "Which is a common component in agentic RAG?",
+      "options": [
+        "ReAct/plan-execute",
+        "Pure keyword match only",
+        "No memory",
+        "Fixed prompt only"
+      ],
+      "answer": 0,
+      "explanation": "ReAct or plan-execute loop lets agent call retriever/tools iteratively."
+    },
+    {
+      "id": "lg-1",
+      "topic": "langchain-langgraph-langsmith",
+      "difficulty": "easy",
+      "question": "When is LangGraph preferred over simple chains?",
+      "options": [
+        "No state needed",
+        "Complex stateful/multi-step flows with routing",
+        "Only one prompt",
+        "No tools"
+      ],
+      "answer": 1,
+      "explanation": "LangGraph excels at stateful graphs, conditionals, and human-in-the-loop."
+    },
+    {
+      "id": "lg-2",
+      "topic": "langchain-langgraph-langsmith",
+      "difficulty": "medium",
+      "question": "What is LangSmith mainly used for?",
+      "options": [
+        "Rendering UI",
+        "Tracing, evals, datasets, monitoring",
+        "Vector indexing only",
+        "GPU scheduling"
+      ],
+      "answer": 1,
+      "explanation": "LangSmith provides observability and evaluation workflows."
+    },
+    {
+      "id": "rm-1",
+      "topic": "ragas-metrics",
+      "difficulty": "medium",
+      "question": "Which RAGAS metric best detects hallucinations?",
+      "options": [
+        "BLEU",
+        "Faithfulness",
+        "ROUGE",
+        "F1 token"
+      ],
+      "answer": 1,
+      "explanation": "Faithfulness checks if generated claims are grounded in retrieved context."
+    },
+    {
+      "id": "rq-1",
+      "topic": "rag-retrieval-generation-qa",
+      "difficulty": "easy",
+      "question": "Why use a reranker after retrieval?",
+      "options": [
+        "To increase k",
+        "To improve precision of top results cheaply",
+        "To compress vectors",
+        "To encrypt docs"
+      ],
+      "answer": 1,
+      "explanation": "Cross-encoder reranker re-scores top-k for better relevance."
+    },
+    {
+      "id": "mo-6",
+      "topic": "mlops-basics-and-practices",
+      "difficulty": "medium",
+      "question": "Why version embedding models in RAG pipelines?",
+      "options": [
+        "Cosmetic",
+        "Changing embeddings breaks similarity; need re-index + consistent versions",
+        "Saves disk only",
+        "No effect"
+      ],
+      "answer": 1,
+      "explanation": "Old embeddings are incompatible with new model space; must re-embed + version."
+    },
+    {
+      "id": "aw-1",
+      "topic": "rag-deployment-aws",
+      "difficulty": "medium",
+      "question": "Which AWS option gives most control for agentic RAG?",
+      "options": [
+        "Static S3 site",
+        "Custom FastAPI+LangGraph on ECS/Fargate",
+        "Email attachment",
+        "S3 presigned GET"
+      ],
+      "answer": 1,
+      "explanation": "Custom container gives full control over routing, tools, state."
+    },
+    {
+      "id": "fm-1",
+      "topic": "frontier-llm-models-pros-cons",
+      "difficulty": "easy",
+      "question": "Best choice for on-prem/private deployment?",
+      "options": [
+        "Closed SaaS only",
+        "Open-weight models (Llama/Mistral/DeepSeek)",
+        "No models fit",
+        "Proprietary-only"
+      ],
+      "answer": 1,
+      "explanation": "Open weights let you self-host with data control."
+    },
+    {
+      "id": "ph-1",
+      "topic": "pharma-companies",
+      "difficulty": "medium",
+      "question": "Which company runs the Regeneron Genetics Center (RGC)?",
+      "options": [
+        "Roche",
+        "Regeneron",
+        "Novartis",
+        "Merck"
+      ],
+      "answer": 1,
+      "explanation": "Regeneron leverages massive human-genetics data for target discovery."
+    },
+    {
+      "id": "ph-2",
+      "topic": "pharma-companies",
+      "difficulty": "medium",
+      "question": "Which company is known for digital pathology and Flatiron Health?",
+      "options": [
+        "Lilly",
+        "Roche",
+        "Teva",
+        "Sandoz"
+      ],
+      "answer": 1,
+      "explanation": "Roche/Genentech + Flatiron are central to oncology RWE."
+    },
+    {
+      "id": "ph-3",
+      "topic": "pharma-companies",
+      "difficulty": "easy",
+      "question": "Which company is most associated with Ozempic/Wegovy?",
+      "options": [
+        "Amgen",
+        "Novo Nordisk",
+        "Astellas",
+        "Daiichi Sankyo"
+      ],
+      "answer": 1,
+      "explanation": "Semaglutide (Ozempic/Wegovy) comes from Novo Nordisk."
+    },
+    {
+      "id": "ph-4",
+      "topic": "pharma-companies",
+      "difficulty": "medium",
+      "question": "What business is WuXi AppTec best described as?",
+      "options": [
+        "Pure pharma brand",
+        "Contract Research/Development/Manufacturing (CRDMO)",
+        "Hospital chain",
+        "Payer"
+      ],
+      "answer": 1,
+      "explanation": "WuXi AppTec is a major CDMO/CRDMO partner for drug development."
+    },
+    {
+      "id": "ph-5",
+      "topic": "pharma-companies",
+      "difficulty": "hard",
+      "question": "For clinical risk models, subgroup performance audit is critical because:",
+      "options": [
+        "Saves disk",
+        "Prevents demographic performance gaps",
+        "Speeds training",
+        "Reduces tokens"
+      ],
+      "answer": 1,
+      "explanation": "Models can underperform on underrepresented groups; audit by subgroup."
+    },
+    {
+      "id": "ag-1",
+      "topic": "agentic-rag-architecture",
+      "difficulty": "medium",
+      "question": "What is the purpose of a \"critic\" in agentic RAG?",
+      "options": [
+        "Generate embeddings",
+        "Verify grounding/citations & correctness",
+        "Compress docs",
+        "Tokenize queries"
+      ],
+      "answer": 1,
+      "explanation": "Critic loop catches hallucinations and enforces evidence."
+    },
+    {
+      "id": "ag-2",
+      "topic": "agentic-rag-architecture",
+      "difficulty": "medium",
+      "question": "Corrective RAG improves over vanilla by:",
+      "options": [
+        "Always retrieving 100 docs",
+        "Grading retrieved docs and self-correcting",
+        "Removing reranker",
+        "No tools"
+      ],
+      "answer": 1,
+      "explanation": "It evaluates relevance and decides to refine/retrieve more."
+    },
+    {
+      "id": "ag-3",
+      "topic": "agentic-rag-architecture",
+      "difficulty": "hard",
+      "question": "Which pattern uses entity knowledge graph for global questions?",
+      "options": [
+        "HyDE",
+        "GraphRAG",
+        "Naive RAG",
+        "BM25-only"
+      ],
+      "answer": 1,
+      "explanation": "GraphRAG leverages entities/relations for better global synthesis."
+    },
+    {
+      "id": "ag-4",
+      "topic": "agentic-rag-architecture",
+      "difficulty": "medium",
+      "question": "Why use query rewriting in agentic flows?",
+      "options": [
+        "Make prompts longer",
+        "Handle ambiguity/multi-hop subqueries",
+        "Increase temperature",
+        "Skip embeddings"
+      ],
+      "answer": 1,
+      "explanation": "Decomposition improves recall for complex queries."
+    },
+    {
+      "id": "ag-5",
+      "topic": "agentic-rag-architecture",
+      "difficulty": "easy",
+      "question": "Adaptive RAG means:",
+      "options": [
+        "Same strategy always",
+        "Choose strategy by query complexity",
+        "No retrieval",
+        "Only chat"
+      ],
+      "answer": 1,
+      "explanation": "Routes simple vs complex queries differently."
+    },
+    {
+      "id": "la-1",
+      "topic": "langchain-langgraph-langsmith",
+      "difficulty": "easy",
+      "question": "Human-in-the-loop in LangGraph is useful for:",
+      "options": [
+        "Auto-approve",
+        "High-stakes approvals/edits before proceeding",
+        "Batch only",
+        "No state"
+      ],
+      "answer": 1,
+      "explanation": "Interrupts let humans review before acting."
+    },
+    {
+      "id": "la-2",
+      "topic": "langchain-langgraph-langsmith",
+      "difficulty": "medium",
+      "question": "LCEL in LangChain enables:",
+      "options": [
+        "Monoliths only",
+        "Composable, runnable chains with streaming",
+        "No callbacks",
+        "Static only"
+      ],
+      "answer": 1,
+      "explanation": "LangChain Expression Language composes steps declaratively."
+    },
+    {
+      "id": "la-3",
+      "topic": "langchain-langgraph-langsmith",
+      "difficulty": "medium",
+      "question": "LangSmith datasets help with:",
+      "options": [
+        "GPU tuning",
+        "Golden sets & regression tests",
+        "CSS themes",
+        "Log rotation"
+      ],
+      "answer": 1,
+      "explanation": "Versioned test sets catch regressions on changes."
+    },
+    {
+      "id": "la-4",
+      "topic": "langchain-langgraph-langsmith",
+      "difficulty": "easy",
+      "question": "Checkpoints in LangGraph allow:",
+      "options": [
+        "Losing state",
+        "Resuming interrupted workflows",
+        "Deleting history",
+        "No memory"
+      ],
+      "answer": 1,
+      "explanation": "Persistence supports long-running/paused agents."
+    },
+    {
+      "id": "la-5",
+      "topic": "langchain-langgraph-langsmith",
+      "difficulty": "hard",
+      "question": "Supervisor-worker multi-agent pattern:",
+      "options": [
+        "One node does all",
+        "Supervisor routes tasks to specialized workers",
+        "No routing",
+        "Linear only"
+      ],
+      "answer": 1,
+      "explanation": "Enables separation of concerns and parallelism."
+    },
+    {
+      "id": "ra-1",
+      "topic": "ragas-metrics",
+      "difficulty": "easy",
+      "question": "Context Recall measures:",
+      "options": [
+        "Speed",
+        "If context covers all needed claims",
+        "Token count",
+        "Cost"
+      ],
+      "answer": 1,
+      "explanation": "High recall means minimal missing info."
+    },
+    {
+      "id": "ra-2",
+      "topic": "ragas-metrics",
+      "difficulty": "medium",
+      "question": "Faithfulness penalizes:",
+      "options": [
+        "Citations",
+        "Unsubstantiated claims not in context",
+        "Structured JSON",
+        "Short answers"
+      ],
+      "answer": 1,
+      "explanation": "Core guard against hallucinations."
+    },
+    {
+      "id": "ra-3",
+      "topic": "ragas-metrics",
+      "difficulty": "medium",
+      "question": "Answer Relevancy checks:",
+      "options": [
+        "Font size",
+        "Directness to the question",
+        "Disk I/O",
+        "Model size"
+      ],
+      "answer": 1,
+      "explanation": "Ensures answer addresses the actual question."
+    },
+    {
+      "id": "ra-4",
+      "topic": "ragas-metrics",
+      "difficulty": "hard",
+      "question": "Why prefer reference-free metrics for RAG?",
+      "options": [
+        "No references exist or expensive",
+        "Always need gold answers",
+        "Slower only",
+        "No reason"
+      ],
+      "answer": 1,
+      "explanation": "Reference answers often missing; reference-free scale better."
+    },
+    {
+      "id": "ra-5",
+      "topic": "ragas-metrics",
+      "difficulty": "medium",
+      "question": "Context Precision focuses on:",
+      "options": [
+        "Top-ranked contexts having relevant info",
+        "Total docs count",
+        "File names",
+        "Timestamps"
+      ],
+      "answer": 1,
+      "explanation": "Penalizes irrelevant chunks high in top-k."
+    },
+    {
+      "id": "ra-6",
+      "topic": "rag-retrieval-generation-qa",
+      "difficulty": "easy",
+      "question": "Best practice to reduce hallucination?",
+      "options": [
+        "Raise temperature",
+        "Ground answers in retrieved context with citations",
+        "Remove retriever",
+        "Use bigger vocab"
+      ],
+      "answer": 1,
+      "explanation": "Grounding + citations is the primary mitigation."
+    },
+    {
+      "id": "ra-7",
+      "topic": "rag-retrieval-generation-qa",
+      "difficulty": "medium",
+      "question": "Hybrid retrieval combines:",
+      "options": [
+        "Only dense",
+        "BM25 + dense vectors",
+        "Images only",
+        "SQL only"
+      ],
+      "answer": 1,
+      "explanation": "Balances exact keyword and semantic matching."
+    },
+    {
+      "id": "ra-8",
+      "topic": "rag-retrieval-generation-qa",
+      "difficulty": "medium",
+      "question": "Chunking strategy best practice?",
+      "options": [
+        "Always 500 chars",
+        "Semantic/recursive, preserve structure & metadata",
+        "Random",
+        "One giant chunk"
+      ],
+      "answer": 1,
+      "explanation": "Structure-aware chunking improves retrieval quality."
+    },
+    {
+      "id": "ra-9",
+      "topic": "rag-retrieval-generation-qa",
+      "difficulty": "hard",
+      "question": "\"Lost in the middle\" issue suggests:",
+      "options": [
+        "Ignore context",
+        "Place key info at start/end of context",
+        "Only use middle",
+        "Shuffle tokens"
+      ],
+      "answer": 1,
+      "explanation": "Models attend less to middle of long contexts."
+    },
+    {
+      "id": "ra-10",
+      "topic": "rag-retrieval-generation-qa",
+      "difficulty": "medium",
+      "question": "What is HyDE?",
+      "options": [
+        "A hydration library",
+        "Generate hypothetical answer to improve retrieval",
+        "Token sampler",
+        "Compression"
+      ],
+      "answer": 1,
+      "explanation": "Hypothetical Document Embeddings bridge query-doc gap."
+    },
+    {
+      "id": "ml-1",
+      "topic": "mlops-basics-and-practices",
+      "difficulty": "medium",
+      "question": "Best tool to version datasets/models?",
+      "options": [
+        "Excel",
+        "DVC/git-lfs",
+        "Notepad",
+        "Cron"
+      ],
+      "answer": 1,
+      "explanation": "DVC tracks data/model versions alongside code."
+    },
+    {
+      "id": "ml-2",
+      "topic": "mlops-basics-and-practices",
+      "difficulty": "medium",
+      "question": "What detects data drift?",
+      "options": [
+        "KS/PSI tests on features",
+        "CSS audits",
+        "Token count",
+        "GPU temp"
+      ],
+      "answer": 0,
+      "explanation": "Statistical tests flag distribution shifts."
+    },
+    {
+      "id": "ml-3",
+      "topic": "mlops-basics-and-practices",
+      "difficulty": "easy",
+      "question": "Model registry stores:",
+      "options": [
+        "Only weights",
+        "Versioned models + metadata/stage",
+        "Logs only",
+        "Secrets"
+      ],
+      "answer": 1,
+      "explanation": "Enables promotion/rollback and lineage."
+    },
+    {
+      "id": "ml-4",
+      "topic": "mlops-basics-and-practices",
+      "difficulty": "hard",
+      "question": "Why eval gates in CI/CD?",
+      "options": [
+        "Slower builds",
+        "Block regressions before deploy",
+        "Decor",
+        "No reason"
+      ],
+      "answer": 1,
+      "explanation": "Automated golden-set evals catch quality regressions."
+    },
+    {
+      "id": "ml-5",
+      "topic": "mlops-basics-and-practices",
+      "difficulty": "medium",
+      "question": "Shadow deployment means:",
+      "options": [
+        "Replace all traffic",
+        "Send copy of traffic to new model without affecting users",
+        "Delete old model",
+        "A/B only"
+      ],
+      "answer": 1,
+      "explanation": "Validates live behavior with zero user risk."
+    },
+    {
+      "id": "ra-11",
+      "topic": "rag-deployment-aws",
+      "difficulty": "easy",
+      "question": "Managed RAG option on AWS?",
+      "options": [
+        "Bedrock Knowledge Bases",
+        "EC2 only",
+        "S3 website",
+        "Route53"
+      ],
+      "answer": 0,
+      "explanation": "Bedrock KB handles ingest/embed/retrieve."
+    },
+    {
+      "id": "ra-12",
+      "topic": "rag-deployment-aws",
+      "difficulty": "medium",
+      "question": "Which stores embeddings on AWS?",
+      "options": [
+        "OpenSearch / Aurora pgvector",
+        "CloudFront",
+        "SQS",
+        "IAM"
+      ],
+      "answer": 0,
+      "explanation": "Vector-capable stores for similarity search."
+    },
+    {
+      "id": "ra-13",
+      "topic": "rag-deployment-aws",
+      "difficulty": "medium",
+      "question": "Least-privilege access is enforced by:",
+      "options": [
+        "IAM roles/policies",
+        "CSS",
+        "Open ports",
+        "Public buckets"
+      ],
+      "answer": 0,
+      "explanation": "Scope permissions to needed resources."
+    },
+    {
+      "id": "ra-14",
+      "topic": "rag-deployment-aws",
+      "difficulty": "hard",
+      "question": "For PHI workloads you must:",
+      "options": [
+        "Use public buckets",
+        "Encrypt + audit + restrict (HIPAA controls)",
+        "Log all PII",
+        "Disable VPC"
+      ],
+      "answer": 1,
+      "explanation": "Compliance requires encryption, access control, logging."
+    },
+    {
+      "id": "ra-15",
+      "topic": "rag-deployment-aws",
+      "difficulty": "medium",
+      "question": "Cost control technique for RAG?",
+      "options": [
+        "Cache frequent queries",
+        "Duplicate indexes",
+        "No monitoring",
+        "Unbounded k"
+      ],
+      "answer": 0,
+      "explanation": "Caching + right-sizing reduce spend."
+    },
+    {
+      "id": "fr-1",
+      "topic": "frontier-llm-models-pros-cons",
+      "difficulty": "easy",
+      "question": "Which family offers open weights for self-hosting?",
+      "options": [
+        "Llama/Mistral",
+        "Only OpenAI",
+        "Only Gemini",
+        "Closed only"
+      ],
+      "answer": 0,
+      "explanation": "Open weights enable on-prem/private deploy."
+    },
+    {
+      "id": "fr-2",
+      "topic": "frontier-llm-models-pros-cons",
+      "difficulty": "medium",
+      "question": "Why route between models?",
+      "options": [
+        "Cost/latency/quality tradeoffs per task",
+        "No reason",
+        "Smaller vocab",
+        "Fewer tokens"
+      ],
+      "answer": 0,
+      "explanation": "Route easy tasks to cheap models, hard to strong ones."
+    },
+    {
+      "id": "fr-3",
+      "topic": "frontier-llm-models-pros-cons",
+      "difficulty": "medium",
+      "question": "A key criterion for long-document RAG?",
+      "options": [
+        "Logo color",
+        "Long context + strong grounding",
+        "GPU brand",
+        "Fonts"
+      ],
+      "answer": 1,
+      "explanation": "Long context plus faithful citation matters."
+    },
+    {
+      "id": "fr-4",
+      "topic": "frontier-llm-models-pros-cons",
+      "difficulty": "hard",
+      "question": "Vendor lock-in risk is lowest with:",
+      "options": [
+        "Single proprietary API",
+        "Open-weight, self-hosted models",
+        "One cloud",
+        "No abstraction"
+      ],
+      "answer": 1,
+      "explanation": "Abstraction + open models reduce lock-in."
+    },
+    {
+      "id": "fr-5",
+      "topic": "frontier-llm-models-pros-cons",
+      "difficulty": "easy",
+      "question": "Before choosing a model, you should:",
+      "options": [
+        "Guess",
+        "Evaluate on YOUR golden set",
+        "Count params",
+        "Read marketing"
+      ],
+      "answer": 1,
+      "explanation": "Task-specific eval beats generic benchmarks."
+    }
+  ]
+}
