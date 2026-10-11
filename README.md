@@ -106,6 +106,21 @@ Correct answers are kept **server-side** and only revealed after you submit.
 - **Notes**: drop a new `*.md` file in `corpus/` and add a matching topic entry
   in `data/questions.json`.
 
+## Secrets & configuration
+
+This app needs **no API keys** — it runs entirely on localhost with the Python
+standard library. If you later add external LLM/AWS services, follow these rules
+so keys never end up in a public repo:
+
+- Keep secrets in a **`.env` file** (loaded via `os.environ`), never in source.
+  A `.env.example` template is included; `.env` and `.env.*` are gitignored.
+- Never hardcode keys in `server.py`, the web app, or notebooks.
+- **If a key is ever committed, treat it as compromised and rotate it** —
+  deleting the file does not remove it from git history.
+- Add a pre-commit secret scanner (e.g. `gitleaks` or `git-secrets`) and enable
+  **GitHub Push Protection** on the repo.
+- Read secrets from environment variables at runtime, not from files in the repo.
+
 ## Notes / limitations
 
 This is a POC: history is stored in a plain JSON file (single user, no auth).

@@ -1,4 +1,22 @@
+# Python
 __pycache__/
 *.pyc
+.venv/
+venv/
+
+# Local user data (quiz history)
 data/history.json
+
+# Secrets — never commit these
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+secrets.json
+credentials.json
+
+# OS / editor
 .DS_Store
+.idea/
+.vscode/
